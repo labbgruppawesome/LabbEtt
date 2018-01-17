@@ -9,9 +9,5 @@ int main()
 	printf("Hello World");
 	system("pause");
 
-	printf("Hello Erika, you twat <3 /n /n");
-	system("pause");
-
-
 	return 0;
 }
