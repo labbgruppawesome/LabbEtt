@@ -10,6 +10,8 @@ int main()
 	helloWorld();
 	system("pause");
 
+	printf("twat");
+
 	return 0;
 }
 
