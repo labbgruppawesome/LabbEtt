@@ -3,6 +3,7 @@
 #include <string.h>
 #include "wrapper.h"
 
+
 #define TIMERID			100  /* id for timer that is used by the thread that manages the window where graphics is drawn */
 #define DEFAULT_STACK_SIZE	1024
 #define TIME_OUT			MAILSLOT_WAIT_FOREVER 
@@ -14,6 +15,12 @@ DWORD threadCreate(LPTHREAD_START_ROUTINE threadFunc, LPVOID threadParams) {
 
 	/* Creates a thread running threadFunc */
 	/* optional parameters (NULL otherwise)and returns its id! */
+	DWORD tID; // ID som är en unsigned long int
+	HANDLE handle; // 32 bits värde för en os resurs
+	//Skapar en tråd med argumenten ( Security attributes, stackSize, Trådfunktionen, Trådparametrar, creation flags och trådID
+	handle = CreateThread(NULL, DEFAULT_STACK_SIZE, threadFunc, threadParams, 0, &tID); 
+	
+	return tID;
 }
 
 
