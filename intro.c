@@ -1,21 +1,43 @@
+
+/* Laboration 1
+* DVA315 - Mälardalens Högskola
+* Erika Weilander EWR15002
+* Linus Sens Ingels LIS16001
+*/
+
 #include <stdio.h>
 #include <windows.h>
 #include <string.h>
-
 #include "wrapper.h"
+
+void printHelloWorld();
+void printHelloMoon();
 
 int main()
 {
 
-	helloWorld();
+	printHelloWorld();
+	printHelloMoon();
+
 	system("pause");
 
-	printf("twat");
-
-	return 0;
 }
 
-void helloWorld()
+
+
+void printHelloWorld()
 {
-	printf("Hello World\n");
+	int i;
+	for (i = 0; i<10; i++) {
+		printf("Hello World\n");
+		Sleep(600);
+	}
+}
+
+void printHelloMoon()
+{
+	for (int i = 0; i < 10000000; i++) {
+		printf("Hello Moon\n");
+		Sleep(120);
+	}
 }
