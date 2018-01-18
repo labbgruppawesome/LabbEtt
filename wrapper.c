@@ -14,6 +14,13 @@ DWORD threadCreate(LPTHREAD_START_ROUTINE threadFunc, LPVOID threadParams) {
 
 	/* Creates a thread running threadFunc */
 	/* optional parameters (NULL otherwise)and returns its id! */
+
+	DWORD tID;
+	HANDLE handle;
+	handle = CreateThread(NULL, DEFAULT_STACK_SIZE, threadFunc, threadParams, 0, &tID); // SkaparTrådMed(Security attributes, stack size, tråd funktion namn, arg till trådfunk, creation flags, return thread indentifier)
+
+	return tID;
+
 }
 
 
