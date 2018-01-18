@@ -1,21 +1,2 @@
-﻿  wrapper.c
-c:\users\ewr15002\source\repos\labbett\wrapper.c(65): warning C4133: '=': incompatible types - from 'char [16]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(72): warning C4133: '=': incompatible types - from 'char [15]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(94): warning C4133: 'function': incompatible types - from 'char [16]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(94): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(107): warning C4133: 'function': incompatible types - from 'char [21]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(107): warning C4133: 'function': incompatible types - from 'char [8]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(125): warning C4133: '=': incompatible types - from 'char [4]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(130): warning C4133: '=': incompatible types - from 'char *' to 'LPWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(134): warning C4133: '=': incompatible types - from 'char *' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(142): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPCWSTR'
-  intro.c
-  Generating Code...
-c:\users\ewr15002\source\repos\labbett\wrapper.c(17): warning C4716: 'threadCreate': must return a value
-c:\users\ewr15002\source\repos\labbett\wrapper.c(24): warning C4716: 'mailslotCreate': must return a value
-c:\users\ewr15002\source\repos\labbett\wrapper.c(30): warning C4716: 'mailslotConnect': must return a value
-c:\users\ewr15002\source\repos\labbett\wrapper.c(36): warning C4716: 'mailslotWrite': must return a value
-c:\users\ewr15002\source\repos\labbett\wrapper.c(42): warning C4716: 'mailslotRead': must return a value
-c:\users\ewr15002\source\repos\labbett\wrapper.c(47): warning C4716: 'mailslotClose': must return a value
-  LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\Debug\LabbEtt.exe
-  LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\Debug\LabbEtt.pdb (Partial PDB)
+﻿  intro.c
+c:\users\ewr15002\source\repos\labbett\intro.c(4): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory
