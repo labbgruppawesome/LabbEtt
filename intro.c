@@ -1,43 +1,29 @@
-
-/* Laboration 1
-* DVA315 - Mälardalens Högskola
-* Erika Weilander EWR15002
-* Linus Sens Ingels LIS16001
-*/
-
 #include <stdio.h>
 #include <windows.h>
 #include <string.h>
 #include "wrapper.h"
 
-void printHelloWorld();
-void printHelloMoon();
-
+void print_hello();
+void hello_moon();
 int main()
 {
+	print_hello();
 
-	printHelloWorld();
-	printHelloMoon();
-
-	system("pause");
-
+	return 0;
 }
 
-
-
-void printHelloWorld()
+void print_hello()
 {
-	int i;
-	for (i = 0; i<10; i++) {
-		printf("Hello World\n");
+	for (int i = 0; i < 10; i++)
+	{
+		printf("Hello world \n");
 		Sleep(600);
 	}
 }
 
-void printHelloMoon()
+void hello_moon()
 {
-	for (int i = 0; i < 10000000; i++) {
-		printf("Hello Moon\n");
-		Sleep(120);
-	}
+	printf("Hello Moon \n");
+	Sleep(120);
+
 }
