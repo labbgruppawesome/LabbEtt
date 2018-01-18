@@ -1,3 +1,7 @@
 ﻿  intro.c
+c:\users\ewr15002\source\repos\labbett\intro.c(11): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'LPTHREAD_START_ROUTINE'
+c:\users\ewr15002\source\repos\labbett\intro.c(11): warning C4133: 'function': incompatible types - from 'void (__cdecl *)()' to 'LPTHREAD_START_ROUTINE'
+c:\users\ewr15002\source\repos\labbett\intro.c(12): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'LPTHREAD_START_ROUTINE'
+c:\users\ewr15002\source\repos\labbett\intro.c(12): warning C4133: 'function': incompatible types - from 'void (__cdecl *)()' to 'LPTHREAD_START_ROUTINE'
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.exe
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.pdb (Partial PDB)

@@ -5,9 +5,12 @@
 
 void print_hello();
 void hello_moon();
+
 int main()
 {
-	print_hello();
+	threadCreate(hello_moon, NULL);
+	threadCreate(print_hello, NULL);
+	system("pause");
 
 	return 0;
 }
@@ -23,7 +26,12 @@ void print_hello()
 
 void hello_moon()
 {
-	printf("Hello Moon \n");
-	Sleep(120);
+
+	int korv = 1;
+
+		while(korv) {
+			printf("Hello Moon \n");
+			Sleep(120);
+		};
 
 }
