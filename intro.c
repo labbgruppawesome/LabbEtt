@@ -8,7 +8,6 @@ void hello_moon();
 
 int main()
 {
-	threadCreate(hello_moon, NULL);
 	threadCreate(print_hello, NULL);
 	system("pause");
 
@@ -20,18 +19,22 @@ void print_hello()
 	for (int i = 0; i < 10; i++)
 	{
 		printf("Hello world \n");
-		Sleep(600);
+		Sleep(120);
+		
 	}
+	threadCreate(hello_moon, NULL);
+
 }
 
 void hello_moon()
 {
+	for (int i = 0; i < 10; i++)
+	{
+		printf("Hello Moon \n");
+		Sleep(120);
 
-	int korv = 1;
+	}
 
-		while(korv) {
-			printf("Hello Moon \n");
-			Sleep(120);
-		};
+	threadCreate(print_hello, NULL);
 
 }
