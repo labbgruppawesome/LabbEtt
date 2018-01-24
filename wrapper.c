@@ -1,5 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <windows.h>
+#include <tchar.h>
+#include <strsafe.h>
 #include <string.h>
 #include "wrapper.h"
 
@@ -48,6 +51,17 @@ HANDLE mailslotConnect(char * name) {
 
 	/* Connects to an existing mailslot for writing */
 	/* and returns the handle upon success     */
+	HANDLE hFile = CreateFile(name, GENERIC_WRITE | GENERIC_READ, 0,NULL, CREATE_NEW, FILE_ATTRIBUTE_NORMAL, NULL);
+	
+	if (hFile == INVALID_HANDLE_VALUE) {
+		
+		printf("Could not connect to Mailslot");
+		return 1;
+
+	}
+	
+	return hFile;
+	
 }
 
 int mailslotWrite(HANDLE mailSlot, void *msg, int msgSize) {
@@ -55,7 +69,7 @@ int mailslotWrite(HANDLE mailSlot, void *msg, int msgSize) {
 	/* Write a msg to a mailslot, return nr */
 	/* of successful bytes written         */
 	DWORD bytesWritten;
-	writeFile(mailSlot,msg,msgSize,&bytesWritten,NULL);
+	WriteFile(mailSlot,msg,msgSize,&bytesWritten,NULL);
 
 	return bytesWritten;
 }
@@ -66,7 +80,7 @@ int	mailslotRead(HANDLE mailbox, void *msg, int msgSize) {
 	/* of successful bytes read              */
 
 	DWORD bytesRead;
-	readFile(mailbox, msg, msgSize, &bytesRead, NULL);
+	ReadFile(mailbox, msg, msgSize, &bytesRead, NULL);
 
 	return bytesRead;
 }
@@ -74,7 +88,12 @@ int	mailslotRead(HANDLE mailbox, void *msg, int msgSize) {
 int mailslotClose(HANDLE mailSlot) {
 
 	/* close a mailslot, returning whatever the service call returns */
-	closeHandle(mailSlot);
+
+	if (CloseHandle(mailSlot)) {
+		return 1;
+	}
+	else
+		return 0;	
 	
 }
 

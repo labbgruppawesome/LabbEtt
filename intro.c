@@ -9,6 +9,7 @@ void hello_moon();
 int main()
 {
 	threadCreate(print_hello, NULL);
+	//mailslotCreate();
 
 	system("pause > nul");
 	return 0;
