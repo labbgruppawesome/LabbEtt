@@ -29,6 +29,19 @@ HANDLE mailslotCreate(char *name) {
 
 	/* Creates a mailslot with the specified name and returns the handle */
 	/* Should be able to handle a messages of any size */
+	// skapar en tråd med inkommande namn, utan max meddelande storlek och standard säkerhet
+	HANDLE hSlot = CreateMailslot(name, 0,TIME_OUT, NULL);
+	
+	if (hSlot == INVALID_HANDLE_VALUE)
+	{
+		printf("Could not create mailslot %d \n", hSlot);
+		return NULL;
+	}
+	else                              //Felhantering
+	{
+		printf("Succesfully created mailslot %d \n", hSlot);
+	}
+	return hSlot;
 }
 
 HANDLE mailslotConnect(char * name) {
@@ -41,17 +54,28 @@ int mailslotWrite(HANDLE mailSlot, void *msg, int msgSize) {
 
 	/* Write a msg to a mailslot, return nr */
 	/* of successful bytes written         */
+	DWORD bytesWritten;
+	writeFile(mailSlot,msg,msgSize,&bytesWritten,NULL);
+
+	return bytesWritten;
 }
 
 int	mailslotRead(HANDLE mailbox, void *msg, int msgSize) {
 
 	/* Read a msg from a mailslot, return nr */
 	/* of successful bytes read              */
+
+	DWORD bytesRead;
+	readFile(mailbox, msg, msgSize, &bytesRead, NULL);
+
+	return bytesRead;
 }
 
 int mailslotClose(HANDLE mailSlot) {
 
 	/* close a mailslot, returning whatever the service call returns */
+	closeHandle(mailSlot);
+	
 }
 
 

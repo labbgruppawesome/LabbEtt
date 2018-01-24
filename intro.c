@@ -9,8 +9,8 @@ void hello_moon();
 int main()
 {
 	threadCreate(print_hello, NULL);
-	system("pause");
 
+	system("pause > nul");
 	return 0;
 }
 
