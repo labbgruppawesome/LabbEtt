@@ -38,6 +38,9 @@ HANDLE mailslotCreate(char *name) {
 	if (hSlot == INVALID_HANDLE_VALUE)
 	{
 		printf("Could not create mailslot %d \n", hSlot);
+		/*DWORD errorMessageID = GetLastError();
+		printf("%d", errorMessageID);*/
+
 		return NULL;
 	}
 	else                              //Felhantering
@@ -81,6 +84,9 @@ int	mailslotRead(HANDLE mailbox, void *msg, int msgSize) {
 
 	DWORD bytesRead;
 	ReadFile(mailbox, msg, msgSize, &bytesRead, NULL);
+
+
+
 
 	return bytesRead;
 }

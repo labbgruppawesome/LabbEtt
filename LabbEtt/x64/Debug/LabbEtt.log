@@ -1,21 +1,9 @@
 ﻿  wrapper.c
-c:\users\ewr15002\source\repos\labbett\wrapper.c(36): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
 c:\users\ewr15002\source\repos\labbett\wrapper.c(40): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
 c:\users\ewr15002\source\repos\labbett\wrapper.c(40): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(45): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(45): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(54): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(59): warning C4047: 'return': 'HANDLE' differs in levels of indirection from 'int'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(116): warning C4133: '=': incompatible types - from 'char [16]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(122): warning C4312: 'type cast': conversion from 'int' to 'HBRUSH' of greater size
-c:\users\ewr15002\source\repos\labbett\wrapper.c(123): warning C4133: '=': incompatible types - from 'char [15]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(145): warning C4133: 'function': incompatible types - from 'char [16]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(145): warning C4133: 'function': incompatible types - from 'char *' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(158): warning C4133: 'function': incompatible types - from 'char [21]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(158): warning C4133: 'function': incompatible types - from 'char [8]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(176): warning C4133: '=': incompatible types - from 'char [4]' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(181): warning C4133: '=': incompatible types - from 'char *' to 'LPWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(185): warning C4133: '=': incompatible types - from 'char *' to 'LPCWSTR'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(193): warning C4133: 'function': incompatible types - from 'char [260]' to 'LPCWSTR'
+c:\users\ewr15002\source\repos\labbett\wrapper.c(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
+c:\users\ewr15002\source\repos\labbett\wrapper.c(48): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'HANDLE'
+c:\users\ewr15002\source\repos\labbett\wrapper.c(62): warning C4047: 'return': 'HANDLE' differs in levels of indirection from 'int'
+c:\users\ewr15002\source\repos\labbett\wrapper.c(128): warning C4312: 'type cast': conversion from 'int' to 'HBRUSH' of greater size
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.exe
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.pdb (Partial PDB)
