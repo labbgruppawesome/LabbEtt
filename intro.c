@@ -4,6 +4,9 @@
 #include "wrapper.h"
 
 HANDLE hSlot;
+HANDLE hFile;
+
+
 LPTSTR SlotName = TEXT("\\\\.\\mailslot\\MailSlot");
 
 int main()
@@ -16,12 +19,12 @@ int main()
 	fgets(&userInputStr, 100, stdin);
 
 	hSlot = mailslotCreate(SlotName);
+	hFile = mailslotConnect(SlotName);
 	printf("Hej Linkan");
-	mailslotWrite(hSlot, userInputStr, 100);
+	mailslotWrite(SlotName, userInputStr, 100);
 	printf("Hej Skinkan");
-	mailslotRead(hSlot, userInputStr, 100);
+	mailslotRead(SlotName, userInputStr, 100);
 	printf("Hej Minkan");
-
 
 
 	system("pause > nul");

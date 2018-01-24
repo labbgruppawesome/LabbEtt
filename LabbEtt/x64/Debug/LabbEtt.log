@@ -1,9 +1,5 @@
-﻿  wrapper.c
-c:\users\ewr15002\source\repos\labbett\wrapper.c(40): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(40): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(48): warning C4313: 'printf': '%d' in format string conflicts with argument 1 of type 'HANDLE'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(62): warning C4047: 'return': 'HANDLE' differs in levels of indirection from 'int'
-c:\users\ewr15002\source\repos\labbett\wrapper.c(128): warning C4312: 'type cast': conversion from 'int' to 'HBRUSH' of greater size
+﻿  intro.c
+c:\users\ewr15002\source\repos\labbett\intro.c(16): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[100]'
+c:\users\ewr15002\source\repos\labbett\intro.c(16): warning C4024: 'fgets': different types for formal and actual parameter 1
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.exe
   LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.pdb (Partial PDB)
