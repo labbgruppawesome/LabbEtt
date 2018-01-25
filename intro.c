@@ -3,30 +3,40 @@
 #include <string.h>
 #include "wrapper.h"
 
-HANDLE hSlot;
-HANDLE hFile;
+void writeInput();
 
-
+HANDLE hRead;
+HANDLE hWrite;
 LPTSTR SlotName = TEXT("\\\\.\\mailslot\\MailSlot");
 
 int main()
 {
-	char userInputStr[100];
-	char msgRecieved[] = "Received";
-	char systemEnd[] = "END";
-
-	printf("Type your message here: \n");
-	fgets(&userInputStr, 100, stdin);
-
-	hSlot = mailslotCreate(SlotName);
-	hFile = mailslotConnect(SlotName);
-	printf("Hej Linkan");
-	mailslotWrite(SlotName, userInputStr, 100);
-	printf("Hej Skinkan");
-	mailslotRead(SlotName, userInputStr, 100);
+	hRead = mailslotCreate(SlotName);
+	hWrite = mailslotConnect(SlotName);
+	char endmsg[3] = "END";
+	char *userInputStr = malloc(100);
+	
+	threadCreate(writeInput, NULL);
+	
+	while (TRUE)
+	{
+		mailslotRead(hRead, userInputStr, 100);
+		printf(userInputStr);
+	}
 	printf("Hej Minkan");
-
-
+	
 	system("pause > nul");
 	return 0;
 }
+
+void writeInput()
+{
+	char *userInput = malloc(100);
+	while (TRUE)
+	{
+		fgets(userInput, 100, stdin);
+		mailslotWrite(hWrite, userInput, 100);
+	}
+}
+
+

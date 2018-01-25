@@ -87,7 +87,6 @@ int	mailslotRead(HANDLE mailbox, void *msg, int msgSize) {
 
 
 
-
 	return bytesRead;
 }
 

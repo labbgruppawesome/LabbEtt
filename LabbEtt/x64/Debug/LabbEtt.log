@@ -1,5 +1,4 @@
 ﻿  intro.c
-c:\users\ewr15002\source\repos\labbett\intro.c(16): warning C4047: 'function': 'char *' differs in levels of indirection from 'char (*)[100]'
-c:\users\ewr15002\source\repos\labbett\intro.c(16): warning C4024: 'fgets': different types for formal and actual parameter 1
-  LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.exe
-  LabbEtt.vcxproj -> C:\Users\ewr15002\source\repos\LabbEtt\x64\Debug\LabbEtt.pdb (Partial PDB)
+c:\users\linus\desktop\skola\år2\operativsystem\labbett\labbett\labbett\intro.c(19): warning C4113: 'void (__cdecl *)()' differs in parameter lists from 'LPTHREAD_START_ROUTINE'
+c:\users\linus\desktop\skola\år2\operativsystem\labbett\labbett\labbett\intro.c(19): warning C4133: 'function': incompatible types - from 'void (__cdecl *)()' to 'LPTHREAD_START_ROUTINE'
+  LabbEtt.vcxproj -> C:\Users\Linus\Desktop\Skola\År2\Operativsystem\LabbEtt\LabbEtt\LabbEtt\x64\Debug\LabbEtt.exe
