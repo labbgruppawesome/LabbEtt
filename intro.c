@@ -5,6 +5,11 @@
 
 void writeInput();
 
+typedef struct {
+	char userInputStr[100];
+}something;
+
+
 HANDLE hRead;
 HANDLE hWrite;
 LPTSTR SlotName = TEXT("\\\\.\\mailslot\\MailSlot");
@@ -13,17 +18,23 @@ int main()
 {
 	hRead = mailslotCreate(SlotName);
 	hWrite = mailslotConnect(SlotName);
-	char endmsg[3] = "END";
-	char *userInputStr = malloc(100);
+	char endmsg[5] = "END\n";
+	something *input = malloc(100);
 	
 	threadCreate(writeInput, NULL);
 	
 	while (TRUE)
 	{
-		mailslotRead(hRead, userInputStr, 100);
-		printf(userInputStr);
+		mailslotRead(hRead, input->userInputStr, 100);
+		printf("Following message was recieved: %s",input->userInputStr);
+
+		if ((strcmp(endmsg, input->userInputStr)) == 0)
+		{
+			break;
+		}
+			
 	}
-	printf("Hej Minkan");
+	printf(".. Process ending");
 	
 	system("pause > nul");
 	return 0;
@@ -31,11 +42,12 @@ int main()
 
 void writeInput()
 {
-	char *userInput = malloc(100);
+	char msgrecieved[5] = "END\n";
+	something *userInput = malloc(100);
 	while (TRUE)
 	{
-		fgets(userInput, 100, stdin);
-		mailslotWrite(hWrite, userInput, 100);
+		fgets(userInput->userInputStr, 100, stdin);
+		mailslotWrite(hWrite, userInput->userInputStr, 100);
 	}
 }
 
