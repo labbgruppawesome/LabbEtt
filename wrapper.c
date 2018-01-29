@@ -32,7 +32,7 @@ HANDLE mailslotCreate(char *name) {
 
 	/* Creates a mailslot with the specified name and returns the handle */
 	/* Should be able to handle a messages of any size */
-	// skapar en tråd med inkommande namn, utan max meddelande storlek och standard säkerhet
+	// skapar en slot med inkommande namn, utan max meddelande storlek och standard säkerhet
 	HANDLE hSlot = CreateMailslot(name, 0,TIME_OUT, NULL);
 	
 	if (hSlot == INVALID_HANDLE_VALUE)
